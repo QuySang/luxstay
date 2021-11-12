@@ -9,14 +9,30 @@ const openBar = document.querySelector('.nav-item__bars')
 const closeBar = document.querySelector('.nav-item__bar-close')
 const overLay = document.querySelector('.mask')
 
-numberPerson.addEventListener('click', function(e) {
-        selectnumber.classList.add('select-number--opened')
-        numberPerson.classList.add('search__number--active')  
+
+numberPerson.addEventListener('click', function() {
+    
+        selectnumber.classList.toggle('select-number--opened')
+        numberPerson.classList.toggle('search__number--active')  
+   
+        
+})
+selectnumber.addEventListener('click', function(e) {
+    e.stopPropagation()
 })
 
-menuLanguage.addEventListener('click',function(e){
-        openLanguage.classList.add('menu__language--opened')
-})
+menuLanguage.onclick = function(e){
+    
+        openLanguage.classList.toggle('menu__language--opened')
+    
+    
+}
+
+openLanguage.onclick = function(e){
+    e.stopPropagation()
+    
+}
+
 barBtn.addEventListener('click',function() {
     openBar.classList.add('nav-item__bars--open')
     overLay.style.display = "block"
@@ -29,15 +45,12 @@ openBar.addEventListener('click', function(e) {
     const menuLanguage123 = e.target.closest('.js-menu-language')
     const openLanguage2 = document.querySelector('.menu__language2')
     const openLanguage1 = document.querySelector('.menu__language--opened2')
-   
-
+  
     if(menuLanguage123) {
         
         openLanguage2.classList.add('menu__language--opened2')
     }
-    else if(e.target != menuLanguage123) {
-        openLanguage2.classList.remove('menu__language--opened2')
-    }
+    
     if(openLanguage1) {
         openLanguage2.classList.remove('menu__language--opened2')
     }
@@ -49,10 +62,10 @@ overLay.addEventListener('click',function() {
 })
 window.addEventListener('mouseup', function(event) {
     
-    if (event.target != openLanguage && event.target.parentNode != openLanguage) {
+    if (event.target != openLanguage) {
         openLanguage.classList.remove('menu__language--opened')
     }
-    if(event.target != selectnumber && event.target.parentNode != selectnumber) {
+    if(event.target != selectnumber) {
         selectnumber.classList.remove('select-number--opened')
         numberPerson.classList.remove('search__number--active')
     }

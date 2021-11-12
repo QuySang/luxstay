@@ -271,10 +271,12 @@
     top: 10rem;
     right: 0;
     opacity: 0;
+    display: none;
     transition: top .3s,opacity .3s;
 }
 .menu__language--opened{
     opacity: 1 ;
+    display: block;
     visibility: visible;
     top: 6rem;
 }
