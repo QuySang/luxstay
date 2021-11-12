@@ -1,0 +1,114 @@
+/* Tablet and Mobile */
+@media (max-width:1023px) {
+    .hidden-on-tablet-mobile{
+        display: none;
+    }
+    .nav-item{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+    .nav-item__bars{
+        display: flex;
+    }
+    .menu__item-eng{
+        padding: 6px;
+    }
+    .menu__label{
+        flex: 1;
+    }
+    .menu__language{
+        top:100%
+    }
+    .menu__wrap{
+        width: 284px;
+        display: block;
+    }
+    .menu__wrap::after{
+        display: none;
+    }
+    .nav-item__bar{
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        max-width: 320px;
+        width: 100%;
+        background-color: var(--white-color);
+        transform: translateX(-100%);
+        transition: transform linear 0.3s;
+    }
+    .bars-btn {
+        display: block;
+    }
+    .container__container{
+        margin-bottom: 12px;
+    }
+    
+}
+/* Tablet */
+@media (min-width:740px) and (max-width:1023px){
+    .hidden-on-tablet{
+        display: none;
+    }
+    .container__slide-slick{
+        min-height: 150px;
+    }
+    .container__btn-list{
+        right: 5%;
+        top: 115px;
+    }
+    .container__container-img1 {
+        height: 237px !important;
+    }
+    .container__container-header{
+        height: 265px;
+    }
+    .mg-top-16{
+        margin-top: 16px !important;
+    }
+    .container__container-download{
+        margin:16px 0;
+    }
+}
+/* Mobile */
+@media (max-width:739px){
+    .hidden-on-mobile{
+        display: none !important;
+    }
+    .nav-item__box{
+        border: unset;
+        margin-top: 10px;
+        margin-left: 16px;
+    }
+    .nav-item__bars {
+    }
+    .nav-item__bars-icon {
+        font-size: 3rem;
+    }
+    .container__slide-slick{
+        min-height: 100px;
+    }
+    .container__btn-list{
+        right: 5%;
+        top: 65%;
+    }
+    .container__btn-list{
+        width: 30px;
+    }
+    .container {
+        margin: 80px 0 25px;
+    }
+    .app-content{
+       padding: 0 12px;
+    }
+    .container__title{
+        flex-wrap: wrap;
+    }
+    .container__container-img1 {
+        
+        height: 217px !important;
+    }
+}

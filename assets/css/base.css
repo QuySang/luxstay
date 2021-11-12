@@ -1,0 +1,103 @@
+:root{
+    --white-color:#fff;
+    --border-color:#f2f2f2;
+    --btn-color:#f65e39;
+    --label-color:#222;
+    --text-color:#555;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.img{
+    max-width: 100%;
+    height: auto;
+}
+/* Btn */
+.btn-container{
+    position: absolute;
+    display: block;
+    line-height: 0;
+    cursor: pointer;
+    background-color: var(--white-color);
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    outline: none;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 0 7px -4px #000;
+    width: 56px;
+    height: 56px;
+    border-radius: 56px;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+}
+.slick-prev{
+    position: absolute;
+    left: -32px;
+}
+.slick-next{
+    position: absolute;
+    right: -24px;
+}
+.btn-container__icon{
+    font-size: 1.4rem;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled
+{
+    opacity: .25;
+    cursor: default;
+}
+.slick-prev:not(.slick-disabled):hover,
+.slick-next:not(.slick-disabled):hover{
+    color: var(--btn-color);
+    box-shadow: 0 0 5px 0 rgb(246 94 57 / 50%);
+}
+
+/* pc */
+@media (min-width:1024px){
+    .hidden-on-pc{
+        display: none;
+    }
+    .mg-top-36{
+        margin-top: 36px;
+    }
+    .mg-l-20pt{
+        margin-left: 20%;
+    }
+    .mg-l-14pt{
+        margin-left: 14%;
+    }
+}
+
+/* tablet */
+@media (min-width:740px) and (max-width:1023px){
+
+}
+/* mobile */
+@media (max-width:739px){
+    
+}
+@keyframes inFade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
